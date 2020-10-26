@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Создать таск
+{% endblock %}
+
+{% block content %}
+<h1>Создать такс</h1>
+<form method="POST">
+    <input type="text" placeholder="Введите название" class="form-control"><br>
+    <textarea class="form-control" placeholder="Введите описание"></textarea>
+    <button type="submit" class="btn btn-success">Add task</button>
+</form>
+{% endblock %}
