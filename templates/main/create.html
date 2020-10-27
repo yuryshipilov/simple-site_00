@@ -5,10 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<h1>Создать такс</h1>
+<h1>Создать таск</h1>
 <form method="POST">
-    <input type="text" placeholder="Введите название" class="form-control"><br>
-    <textarea class="form-control" placeholder="Введите описание"></textarea>
-    <button type="submit" class="btn btn-success">Add task</button>
+    {% csrf_token %}
+    {{ form.title }}
+    {{ form.task }}
+    <button type="submit" class="btn btn-success mt-3">Add task</button>
+    <span>{{ error }}</span>
 </form>
 {% endblock %}
